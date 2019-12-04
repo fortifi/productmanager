@@ -13,7 +13,7 @@
     "psr-4": {
       "Fortifi\\ProductManager\\": "src/"
     }
-  }
+  },
   "autoload-dev": {
     "psr-4": {
       "Fortifi\\Tests\\ProductManager\\": "tests/"
