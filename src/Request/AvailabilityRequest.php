@@ -1,7 +1,7 @@
 <?php
 namespace Fortifi\ProductManager\Request;
 
-class AvailabilityRequest extends Request
+abstract class AvailabilityRequest extends Request
 {
 
 }

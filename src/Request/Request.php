@@ -55,17 +55,31 @@ class Request extends BaseData
     switch($type)
     {
       case RequestType::PROVISION_SETUP:
+        $response = new ProvisioningSetupRequest();
+        break;
       case RequestType::PROVISION_ACTIVATE:
+        $response = new ProvisioningActivateRequest();
+        break;
       case RequestType::PROVISION_PROPERTIES_SET:
+        $response = new ProvisioningPropertiesSetRequest();
+        break;
       case RequestType::PROVISION_SUSPEND:
+        $response = new ProvisioningSuspendRequest();
+        break;
       case RequestType::PROVISION_REACTIVATE:
+        $response = new ProvisioningReactivateRequest();
+        break;
       case RequestType::PROVISION_CANCEL:
+        $response = new ProvisioningCancelRequest();
+        break;
       case RequestType::PROVISION_TERMINATE:
-        $response = new ProvisioningRequest();
+        $response = new ProvisioningTerminateRequest();
         break;
       case RequestType::AVAILABILITY_CHECK:
+        $response = new AvailabilityCheckRequest();
+        break;
       case RequestType::AVAILABILITY_RESERVE:
-        $response = new AvailabilityRequest();
+        $response = new AvailabilityReserveRequest();
         break;
       default:
         $response = new static();

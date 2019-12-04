@@ -3,7 +3,7 @@ namespace Fortifi\ProductManager\Response;
 
 use Fortifi\ProductManager\Log\Message;
 
-class ProvisioningResponse extends Response
+abstract class ProvisioningResponse extends Response
 {
   /**
    * Status Message

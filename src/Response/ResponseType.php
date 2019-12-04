@@ -3,6 +3,12 @@ namespace Fortifi\ProductManager\Response;
 
 use Fortifi\ProductManager\Enum;
 
+/**
+ * @method static ResponseType PROVISION_SUCCESS
+ * @method static ResponseType PROVISION_PROCESSING
+ * @method static ResponseType PROVISION_FAILED
+ * @method static ResponseType AVAILABILITY
+ */
 class ResponseType extends Enum
 {
   /**
@@ -19,12 +25,7 @@ class ResponseType extends Enum
   const PROVISION_FAILED = 'provision.failed';
 
   /**
-   * Item available to order
+   * Product Availability
    */
-  const AVAILABILITY_AVAILABLE = 'availability.available';
-
-  /**
-   * Item has no availability
-   */
-  const AVAILABILITY_UNAVAILABLE = 'availability.unavailable';
+  const AVAILABILITY = 'availability';
 }
