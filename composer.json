@@ -1,0 +1,22 @@
+{
+  "name": "fortifi/productmanager",
+  "description": "Fortifi Product Manager",
+  "homepage": "http://fortifi.io/",
+  "require": {
+    "packaged/enum": "~1.4",
+    "packaged/helpers": "~1.10|~2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "6.4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fortifi\\ProductManager\\": "src/"
+    }
+  }
+  "autoload-dev": {
+    "psr-4": {
+      "Fortifi\\Tests\\ProductManager\\": "tests/"
+    }
+  }
+}
