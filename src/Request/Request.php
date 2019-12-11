@@ -48,7 +48,7 @@ class Request extends BaseData
   {
     if(!isset($raw->type))
     {
-      throw new \Exception("Invalid response type");
+      throw new \Exception("Invalid request type");
     }
 
     $type = new RequestType($raw->type);
