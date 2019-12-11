@@ -25,13 +25,6 @@ class Request extends BaseData
    */
   public $verifyHash;
 
-  public function hydrate($from)
-  {
-    parent::hydrate($from);
-    $this->type = new RequestType($this->type);
-    return $this;
-  }
-
   /**
    * @param $productManagerKey - Configured
    *
@@ -53,37 +46,39 @@ class Request extends BaseData
     switch($type)
     {
       case RequestType::PROVISION_SETUP:
-        $response = new ProvisioningSetupRequest();
+        $request = new ProvisioningSetupRequest();
         break;
       case RequestType::PROVISION_ACTIVATE:
-        $response = new ProvisioningActivateRequest();
+        $request = new ProvisioningActivateRequest();
         break;
       case RequestType::PROVISION_PROPERTIES_SET:
-        $response = new ProvisioningPropertiesSetRequest();
+        $request = new ProvisioningPropertiesSetRequest();
         break;
       case RequestType::PROVISION_SUSPEND:
-        $response = new ProvisioningSuspendRequest();
+        $request = new ProvisioningSuspendRequest();
         break;
       case RequestType::PROVISION_REACTIVATE:
-        $response = new ProvisioningReactivateRequest();
+        $request = new ProvisioningReactivateRequest();
         break;
       case RequestType::PROVISION_CANCEL:
-        $response = new ProvisioningCancelRequest();
+        $request = new ProvisioningCancelRequest();
         break;
       case RequestType::PROVISION_TERMINATE:
-        $response = new ProvisioningTerminateRequest();
+        $request = new ProvisioningTerminateRequest();
         break;
       case RequestType::AVAILABILITY_CHECK:
-        $response = new AvailabilityCheckRequest();
+        $request = new AvailabilityCheckRequest();
         break;
       case RequestType::AVAILABILITY_RESERVE:
-        $response = new AvailabilityReserveRequest();
+        $request = new AvailabilityReserveRequest();
         break;
       default:
-        $response = new static();
+        $request = new static();
         break;
     }
-    $response->hydrate($raw);
-    return $response;
+
+    $request->hydrate($raw);
+    $request->type = $type;
+    return $request;
   }
 }

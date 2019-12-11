@@ -11,13 +11,6 @@ class Response extends BaseData
    */
   public $type;
 
-  public function hydrate($from)
-  {
-    parent::hydrate($from);
-    $this->type = new ResponseType($this->type);
-    return $this;
-  }
-
   public static function fromRaw($raw)
   {
     if(!isset($raw->type))
@@ -45,6 +38,7 @@ class Response extends BaseData
         break;
     }
     $response->hydrate($raw);
+    $response->type = $type;
     return $response;
   }
 }
