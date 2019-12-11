@@ -1,6 +1,8 @@
 <?php
 namespace Fortifi\ProductManager\Request;
 
+use Packaged\Helpers\ValueAs;
+
 class ProvisioningRequest extends Request
 {
   /**
@@ -28,5 +30,12 @@ class ProvisioningRequest extends Request
   public $cycle;
 
   public $purchaseFid;
+
+  public function hydrate($from)
+  {
+    parent::hydrate($from);
+    $this->configuration = ValueAs::arr($this->configuration);
+    return $this;
+  }
 
 }

@@ -2,7 +2,6 @@
 namespace Fortifi\ProductManager\Request;
 
 use Fortifi\ProductManager\BaseData;
-use Packaged\Helpers\ValueAs;
 
 class Request extends BaseData
 {
@@ -29,7 +28,6 @@ class Request extends BaseData
   public function hydrate($from)
   {
     parent::hydrate($from);
-    $this->configuration = ValueAs::arr($this->configuration);
     $this->type = new RequestType($this->type);
     return $this;
   }
