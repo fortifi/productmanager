@@ -20,21 +20,6 @@ class Request extends BaseData
    */
   public $updateUrl;
 
-  /**
-   * @var string Hash to verify your request
-   */
-  public $verifyHash;
-
-  /**
-   * @param $productManagerKey - Configured
-   *
-   * @return bool
-   */
-  public function isVerified($productManagerKey)
-  {
-    return $this->verifyHash == md5($this->transportKey . $productManagerKey);
-  }
-
   public static function fromRaw($raw)
   {
     if(!isset($raw->type))
