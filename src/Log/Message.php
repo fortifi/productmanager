@@ -69,6 +69,17 @@ class Message extends AbstractEnum implements \JsonSerializable
     return $this;
   }
 
+  public function hydrate($raw)
+  {
+    if(isset($raw->type))
+    {
+      $this->_setValue($raw->type);
+    }
+    $this->_message = $raw->message ?? $this->_message;
+    $this->_timestamp = $raw->timestamp ?? $this->_timestamp;
+    return $this;
+  }
+
   public function jsonSerialize()
   {
     return [
