@@ -7,6 +7,8 @@ use Packaged\Enum\AbstractEnum;
  * @method static Message DEBUG($message = null, $timestamp = null)
  * @method static Message INFO($message = null, $timestamp = null)
  * @method static Message WARNING($message = null, $timestamp = null)
+ * @method static Message SUCCESS($message = null, $timestamp = null)
+ * @method static Message ERROR($message = null, $timestamp = null)
  */
 class Message extends AbstractEnum implements \JsonSerializable
 {
