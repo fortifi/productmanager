@@ -7,6 +7,7 @@ class Request extends BaseData
 {
   public $orderFid;
   public $productFid;
+  public $productSkuFid;
   public $priceFid;
   public $customerFid;
 
@@ -38,6 +39,9 @@ class Request extends BaseData
         break;
       case RequestType::PROVISION_PROPERTIES_SET:
         $request = new ProvisioningPropertiesSetRequest();
+        break;
+      case RequestType::PROVISION_MODIFY:
+        $request = new ProvisioningModifyRequest();
         break;
       case RequestType::PROVISION_SUSPEND:
         $request = new ProvisioningSuspendRequest();
