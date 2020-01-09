@@ -9,6 +9,7 @@ use Fortifi\ProductManager\Enum;
  * @method static ResponseType PROVISION_FAILED
  * @method static ResponseType AVAILABILITY_CHECK
  * @method static ResponseType AVAILABILITY_RESERVE
+ * @method static ResponseType HEALTH_CHECK
  */
 class ResponseType extends Enum
 {
@@ -34,4 +35,6 @@ class ResponseType extends Enum
    * Product Availability Reserve
    */
   const AVAILABILITY_RESERVE = 'availability.reserve';
+
+  const HEALTH_CHECK = 'health.check';
 }

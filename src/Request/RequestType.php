@@ -15,6 +15,7 @@ use Fortifi\ProductManager\Enum;
  * @method static RequestType PROVISION_REACTIVATE
  * @method static RequestType PROVISION_CANCEL
  * @method static RequestType PROVISION_TERMINATE
+ * @method static RequestType HEALTH_CHECK
  */
 class RequestType extends Enum
 {
@@ -31,4 +32,6 @@ class RequestType extends Enum
   const PROVISION_REACTIVATE = 'provision.reactivate';
   const PROVISION_CANCEL = 'provision.cancel';
   const PROVISION_TERMINATE = 'provision.terminate';
+
+  const HEALTH_CHECK = 'health.check';
 }

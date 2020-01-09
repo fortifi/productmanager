@@ -21,6 +21,9 @@ class Response extends BaseData
     $type = new ResponseType($raw->type);
     switch($type)
     {
+      case ResponseType::HEALTH_CHECK:
+        $response = new HealthCheckResponse();
+        break;
       case ResponseType::PROVISION_FAILED:
         $response = new ProvisioningFailedResponse();
         break;
