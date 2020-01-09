@@ -4,7 +4,15 @@ namespace Fortifi\ProductManager\Response;
 
 class AvailabilityCheckResponse extends Response
 {
-  public $result;
+  /**
+   * @var bool
+   */
+  public $isAvailable;
+
+  /**
+   * @var string[]
+   */
+  public $availableSkuFids;
 
   public function __construct()
   {
