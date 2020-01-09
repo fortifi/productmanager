@@ -16,11 +16,6 @@ class Request extends BaseData
    */
   public $type;
 
-  /**
-   * @var string URL to post updates for this request to
-   */
-  public $updateUrl;
-
   public static function fromRaw($raw)
   {
     if(!isset($raw->type))

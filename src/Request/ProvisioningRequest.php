@@ -31,6 +31,11 @@ class ProvisioningRequest extends Request
 
   public $purchaseFid;
 
+  /**
+   * @var string URL to post updates for this request to
+   */
+  public $updateUrl;
+
   public function hydrate($from)
   {
     parent::hydrate($from);
