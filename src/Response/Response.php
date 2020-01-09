@@ -30,8 +30,11 @@ class Response extends BaseData
       case ResponseType::PROVISION_PROCESSING:
         $response = new ProvisioningProcessingResponse();
         break;
-      case ResponseType::AVAILABILITY:
-        $response = new AvailabilityResponse();
+      case ResponseType::AVAILABILITY_CHECK:
+        $response = new AvailabilityCheckResponse();
+        break;
+      case ResponseType::AVAILABILITY_RESERVE:
+        $response = new AvailabilityReserveResponse();
         break;
       default:
         $response = new static();

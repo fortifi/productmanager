@@ -7,7 +7,8 @@ use Fortifi\ProductManager\Enum;
  * @method static ResponseType PROVISION_SUCCESS
  * @method static ResponseType PROVISION_PROCESSING
  * @method static ResponseType PROVISION_FAILED
- * @method static ResponseType AVAILABILITY
+ * @method static ResponseType AVAILABILITY_CHECK
+ * @method static ResponseType AVAILABILITY_RESERVE
  */
 class ResponseType extends Enum
 {
@@ -25,7 +26,12 @@ class ResponseType extends Enum
   const PROVISION_FAILED = 'provision.failed';
 
   /**
-   * Product Availability
+   * Product Availability Check
    */
-  const AVAILABILITY = 'availability';
+  const AVAILABILITY_CHECK = 'availability.check';
+
+  /**
+   * Product Availability Reserve
+   */
+  const AVAILABILITY_RESERVE = 'availability.reserve';
 }
