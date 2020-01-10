@@ -15,7 +15,7 @@ class ProductManagerTest extends TestCase
     $request->type = RequestType::PROVISION_ACTIVATE();
     $request->orderFid = 'FID:ORD:1505751823:OGmYqUzfJVtKr';
     $request->productFid = 'FID:PROD:1505752039:z5DvVoA3HuAF';
-    $request->productSkuFid = 'FID:PROD:SKU:1505752100:qUzfJVtK';
+    $request->productSku = 'FID:PROD:SKU:1505752100:qUzfJVtK';
     $request->priceFid = 'FID:PROD:PRCE:1505752100:ZJneYwx';
     $request->startTimestamp = 1507670331;
     $request->renewTimestamp = 1507670315;
@@ -31,7 +31,7 @@ class ProductManagerTest extends TestCase
 
     $this->assertEquals($request->type, $decodeRequest->type);
     $this->assertEquals($request->orderFid, $decodeRequest->orderFid);
-    $this->assertEquals($request->productSkuFid, $decodeRequest->productSkuFid);
+    $this->assertEquals($request->productSku, $decodeRequest->productSku);
     $this->assertEquals($request->productFid, $decodeRequest->productFid);
     $this->assertEquals($request->priceFid, $decodeRequest->priceFid);
     $this->assertEquals($request->startTimestamp, $decodeRequest->startTimestamp);

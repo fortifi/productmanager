@@ -7,7 +7,7 @@ class Request extends BaseData
 {
   public $orderFid;
   public $productFid;
-  public $productSkuFid;
+  public $productSku;
   public $priceFid;
   public $customerFid;
 

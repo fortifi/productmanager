@@ -12,7 +12,7 @@ class AvailabilityCheckResponse extends Response
   /**
    * @var string[]
    */
-  public $availableSkuFids;
+  public $availableSkus;
 
   public function __construct()
   {
