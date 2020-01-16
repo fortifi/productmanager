@@ -31,6 +31,8 @@ class ProvisioningRequest extends Request
 
   public $purchaseFid;
 
+  public $resourceFid;
+
   /**
    * @var string URL to post updates for this request to
    */
