@@ -5,6 +5,7 @@ use Fortifi\ProductManager\BaseData;
 
 class Request extends BaseData
 {
+  public $orgFid;
   public $orderFid;
   public $productFid;
   public $productSku;
