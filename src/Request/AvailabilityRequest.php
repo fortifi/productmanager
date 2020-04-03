@@ -3,5 +3,5 @@ namespace Fortifi\ProductManager\Request;
 
 abstract class AvailabilityRequest extends Request
 {
-
+  public $reserveKey;
 }
