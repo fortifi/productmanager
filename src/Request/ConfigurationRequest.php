@@ -1,7 +1,7 @@
 <?php
 namespace Fortifi\ProductManager\Request;
 
-class ConfigurationRequest extends AvailabilityRequest
+class ConfigurationRequest extends Request
 {
   public function __construct()
   {
