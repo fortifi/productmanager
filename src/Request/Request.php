@@ -28,7 +28,10 @@ class Request extends BaseData
     $type = new RequestType($raw->type);
     switch($type)
     {
-      case RequestType::HEALTH_CHECK():
+      case RequestType::CONFIGURATION:
+        $request = new ConfigurationRequest();
+        break;
+      case RequestType::HEALTH_CHECK:
         $request = new HealthCheckRequest();
         break;
       case RequestType::PROVISION_SETUP:
