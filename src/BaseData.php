@@ -33,11 +33,11 @@ abstract class BaseData
 
   public function setVerificationData($productManagerKey, $transportKey = null)
   {
-    if($transportKey != null)
+    if($transportKey !== null)
     {
       $this->transportKey = $transportKey;
     }
-    else if($transportKey == null && $this->transportKey == null)
+    else if($transportKey === null && $this->transportKey === null)
     {
       $this->transportKey = Strings::randomString();
     }
