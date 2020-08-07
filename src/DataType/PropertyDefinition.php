@@ -10,6 +10,7 @@ class PropertyDefinition
 
   public $key;
   public $name;
+  public $description;
   public $defaultValue;
   public $options = [];
   public $validationRegex;
