@@ -18,8 +18,7 @@ class Response extends BaseData
       throw new Exception("Invalid response type");
     }
 
-    $type = new ResponseType($raw->type);
-    switch($type)
+    switch($raw->type)
     {
       case ResponseType::CONFIGURATION:
         $response = new ConfigurationResponse();
@@ -47,7 +46,10 @@ class Response extends BaseData
         break;
     }
     $response->hydrate($raw);
-    $response->type = $type;
+    if(!($response->type instanceof ResponseType))
+    {
+      $response->type = new ResponseType($raw->type);
+    }
     return $response;
   }
 }

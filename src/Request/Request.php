@@ -25,8 +25,7 @@ class Request extends BaseData
       throw new \Exception("Invalid request type");
     }
 
-    $type = new RequestType($raw->type);
-    switch($type)
+    switch($raw->type)
     {
       case RequestType::CONFIGURATION:
         $request = new ConfigurationRequest();
@@ -70,7 +69,10 @@ class Request extends BaseData
     }
 
     $request->hydrate($raw);
-    $request->type = $type;
+    if(!($request->type instanceof RequestType))
+    {
+      $request->type = new RequestType($raw->type);
+    }
     return $request;
   }
 }
