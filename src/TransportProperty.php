@@ -35,4 +35,48 @@ class TransportProperty
    * @var int
    */
   public $countValue = 0;
+
+  public static function stringValue($key, string $value)
+  {
+    $prop = new static();
+    $prop->key = $key;
+    $prop->stringValue = $value;
+    return $prop;
+  }
+
+  public static function flagValue($key, bool $value)
+  {
+    $prop = new static();
+    $prop->key = $key;
+    $prop->type = self::TYPE_FLAG;
+    $prop->flagValue = $value;
+    return $prop;
+  }
+
+  public static function countValue($key, int $value)
+  {
+    $prop = new static();
+    $prop->key = $key;
+    $prop->type = self::TYPE_COUNT;
+    $prop->countValue = $value;
+    return $prop;
+  }
+
+  public static function increment($key, int $value)
+  {
+    $prop = new static();
+    $prop->key = $key;
+    $prop->type = self::RETURN_TYPE_INC_COUNT;
+    $prop->countValue = $value;
+    return $prop;
+  }
+
+  public static function decrement($key, int $value)
+  {
+    $prop = new static();
+    $prop->key = $key;
+    $prop->type = self::RETURN_TYPE_DEC_COUNT;
+    $prop->countValue = $value;
+    return $prop;
+  }
 }
