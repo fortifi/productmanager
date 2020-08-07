@@ -13,6 +13,11 @@ class Response extends BaseData
 
   public static function fromRaw($raw)
   {
+    if(is_array($raw))
+    {
+      $raw = (object)$raw;
+    }
+
     if(!isset($raw->type))
     {
       throw new Exception("Invalid response type");
