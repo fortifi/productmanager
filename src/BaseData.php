@@ -1,7 +1,6 @@
 <?php
 namespace Fortifi\ProductManager;
 
-use Fortifi\ProductManager\DataType\TransportProperty;
 use Packaged\Helpers\Objects;
 use Packaged\Helpers\Strings;
 
@@ -46,25 +45,9 @@ abstract class BaseData
     return $this;
   }
 
-  /**
-   * @var TransportProperty[]
-   */
-  public $properties = [];
-
   public function hydrate($from)
   {
     Objects::hydrate($this, $from);
-    if(!empty($this->properties))
-    {
-      $newProps = [];
-      foreach($this->properties as $prop)
-      {
-        $newProp = new TransportProperty();
-        Objects::hydrate($newProp, $prop);
-        $newProps[] = $newProp;
-      }
-      $this->properties = $newProps;
-    }
     return $this;
   }
 }

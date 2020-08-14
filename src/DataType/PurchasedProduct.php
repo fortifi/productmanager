@@ -1,6 +1,8 @@
 <?php
 namespace Fortifi\ProductManager\DataType;
 
+use Packaged\Helpers\Objects;
+
 class PurchasedProduct
 {
   /** Product Manager product type */
@@ -31,6 +33,21 @@ class PurchasedProduct
 
   /** @var TransportProperty[] */
   public $properties = [];
+
+  public function hydrate($from)
+  {
+    Objects::hydrate($this, $from);
+    if(!empty($this->properties))
+    {
+      $newProps = [];
+      foreach($this->properties as $prop)
+      {
+        $newProps[] = Objects::hydrate(new TransportProperty(), $prop);
+      }
+      $this->properties = $newProps;
+    }
+    return $this;
+  }
 
   public $licenceKey;
 
