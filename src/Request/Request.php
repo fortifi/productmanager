@@ -1,6 +1,7 @@
 <?php
 namespace Fortifi\ProductManager\Request;
 
+use Exception;
 use Fortifi\ProductManager\BaseData;
 
 class Request extends BaseData
@@ -8,9 +9,6 @@ class Request extends BaseData
   public $orgFid;
   public $brandFid;
   public $orderFid;
-  public $productFid;
-  public $productSku;
-  public $priceFid;
   public $customerFid;
 
   /**
@@ -26,7 +24,7 @@ class Request extends BaseData
     }
     if(!isset($raw->type))
     {
-      throw new \Exception("Invalid request type");
+      throw new Exception("Invalid request type");
     }
 
     switch($raw->type)

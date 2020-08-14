@@ -1,6 +1,7 @@
 <?php
 namespace Fortifi\ProductManager;
 
+use Fortifi\ProductManager\DataType\TransportProperty;
 use Packaged\Helpers\Objects;
 use Packaged\Helpers\Strings;
 

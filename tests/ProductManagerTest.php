@@ -1,10 +1,10 @@
 <?php
 namespace Fortifi\Tests\ProductManager;
 
+use Fortifi\ProductManager\DataType\TransportProperty;
 use Fortifi\ProductManager\Request\ProvisioningRequest;
 use Fortifi\ProductManager\Request\RequestType;
 use Fortifi\ProductManager\Transport;
-use Fortifi\ProductManager\TransportProperty;
 use PHPUnit\Framework\TestCase;
 
 class ProductManagerTest extends TestCase
@@ -20,7 +20,7 @@ class ProductManagerTest extends TestCase
     $request->startTimestamp = 1507670331;
     $request->renewTimestamp = 1507670315;
     $request->endTimestamp = 1507670312;
-    $request->configuration = ['abc' => 'def'];
+    $request->resourceConfig = ['abc' => 'def'];
     $request->cycle = 'P1M';
     $request->timestamp = 1507670311;
     $request->customerFid = 'FID:CST:1507118063:PtncnWwxy13m2';
@@ -37,7 +37,7 @@ class ProductManagerTest extends TestCase
     $this->assertEquals($request->startTimestamp, $decodeRequest->startTimestamp);
     $this->assertEquals($request->renewTimestamp, $decodeRequest->renewTimestamp);
     $this->assertEquals($request->endTimestamp, $decodeRequest->endTimestamp);
-    $this->assertEquals($request->configuration, $decodeRequest->configuration);
+    $this->assertEquals($request->resourceConfig, $decodeRequest->resourceConfig);
     $this->assertEquals($request->cycle, $decodeRequest->cycle);
     $this->assertEquals($request->timestamp, $decodeRequest->timestamp);
     $this->assertEquals($request->customerFid, $decodeRequest->customerFid);

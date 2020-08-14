@@ -1,9 +1,10 @@
 <?php
 namespace Fortifi\ProductManager;
 
+use JsonSerializable;
 use Packaged\Enum\AbstractEnum;
 
-abstract class Enum extends AbstractEnum implements \JsonSerializable
+abstract class Enum extends AbstractEnum implements JsonSerializable
 {
   public function jsonSerialize()
   {

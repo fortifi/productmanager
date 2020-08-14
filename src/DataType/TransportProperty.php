@@ -1,5 +1,5 @@
 <?php
-namespace Fortifi\ProductManager;
+namespace Fortifi\ProductManager\DataType;
 
 class TransportProperty
 {

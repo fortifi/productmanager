@@ -2,7 +2,7 @@
 
 namespace Fortifi\ProductManager\Response;
 
-use Fortifi\ProductManager\TransportProperty;
+use Fortifi\ProductManager\DataType\TransportProperty;
 
 class AvailabilityCheckSuggestion
 {

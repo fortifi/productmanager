@@ -1,6 +1,7 @@
 <?php
 namespace Fortifi\ProductManager\Log;
 
+use JsonSerializable;
 use Packaged\Enum\AbstractEnum;
 
 /**
@@ -10,7 +11,7 @@ use Packaged\Enum\AbstractEnum;
  * @method static Message SUCCESS($message = null, $timestamp = null)
  * @method static Message ERROR($message = null, $timestamp = null)
  */
-class Message extends AbstractEnum implements \JsonSerializable
+class Message extends AbstractEnum implements JsonSerializable
 {
   const DEBUG = 'debug';
   const INFO = 'info';

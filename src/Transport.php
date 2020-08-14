@@ -1,6 +1,7 @@
 <?php
 namespace Fortifi\ProductManager;
 
+use Exception;
 use Fortifi\ProductManager\Request\Request;
 use Fortifi\ProductManager\Response\Response;
 
@@ -10,7 +11,7 @@ class Transport
    * @param string $jsonString
    *
    * @return Request
-   * @throws \Exception
+   * @throws Exception
    */
   public static function fromJsonRequest($jsonString)
   {
@@ -22,7 +23,7 @@ class Transport
    * @param string $jsonString
    *
    * @return Response
-   * @throws \Exception
+   * @throws Exception
    */
   public static function fromJsonResponse($jsonString)
   {
