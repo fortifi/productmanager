@@ -9,6 +9,7 @@ class PropertyDefinition
   const TYPE_OPTIONS = 'options';
 
   public $key;
+  public $groupKey;
   public $name;
   public $description;
   public $defaultValue;
