@@ -79,4 +79,20 @@ class TransportProperty
     $prop->countValue = $value;
     return $prop;
   }
+
+  public function getValue()
+  {
+    switch($this->type)
+    {
+      case self::TYPE_STRING:
+        return $this->stringValue;
+      case self::TYPE_FLAG:
+        return $this->flagValue;
+      case self::TYPE_COUNT:
+      case self::RETURN_TYPE_INC_COUNT:
+      case self::RETURN_TYPE_DEC_COUNT:
+        return $this->countValue;
+    }
+    return null;
+  }
 }
