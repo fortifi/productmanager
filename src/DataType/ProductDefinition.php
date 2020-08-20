@@ -16,4 +16,9 @@ class ProductDefinition
    * @var ProductSkuDefinition[]
    */
   public $skus = [];
+
+  /**
+   * @var bool
+   */
+  public $canSuspend;
 }
