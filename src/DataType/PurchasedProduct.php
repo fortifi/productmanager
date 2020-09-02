@@ -34,6 +34,9 @@ class PurchasedProduct
   /** @var TransportProperty[] */
   public $properties = [];
 
+  public $licenceKey;
+  public $identity;
+
   public function hydrate($from)
   {
     Objects::hydrate($this, $from);
@@ -48,7 +51,4 @@ class PurchasedProduct
     }
     return $this;
   }
-
-  public $licenceKey;
-
 }
