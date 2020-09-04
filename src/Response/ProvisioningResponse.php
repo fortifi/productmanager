@@ -22,6 +22,13 @@ abstract class ProvisioningResponse extends Response
   /** @var TransportProperty[] */
   public $properties = [];
 
+  /**
+   * Identity to set on the subscription.  This should be left blank for no change
+   *
+   * @var string
+   */
+  public $identity;
+
   public function hydrate($from)
   {
     Objects::hydrate($this, $from);
