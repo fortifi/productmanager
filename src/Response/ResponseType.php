@@ -6,6 +6,7 @@ use Fortifi\ProductManager\Enum;
 /**
  * @method static ResponseType PROVISION_SUCCESS
  * @method static ResponseType PROVISION_PROCESSING
+ * @method static ResponseType PROVISION_RETRY
  * @method static ResponseType PROVISION_FAILED
  * @method static ResponseType AVAILABILITY_CHECK
  * @method static ResponseType AVAILABILITY_RESERVE
@@ -26,6 +27,10 @@ class ResponseType extends Enum
    * Provisioning Request Failed
    */
   const PROVISION_FAILED = 'provision.failed';
+  /**
+   * Provisioning Request Failed, Please Retry
+   */
+  const PROVISION_RETRY = 'provision.retry';
 
   /**
    * Product Availability Check
