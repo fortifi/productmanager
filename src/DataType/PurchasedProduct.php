@@ -7,6 +7,10 @@ class PurchasedProduct
 {
   /** Product Manager product type */
   public $productType;
+
+  /** Product Manager code - built in Fortifi name or FID of custom */
+  public $productManagerCode;
+
   /**
    * Timestamp of the service start date
    */
