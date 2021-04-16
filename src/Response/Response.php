@@ -37,6 +37,9 @@ class Response extends BaseData
       case ResponseType::PROVISION_SUCCESS:
         $response = new ProvisioningSuccessResponse();
         break;
+      case ResponseType::PROVISION_RETRY:
+        $response = new ProvisioningRetryResponse();
+        break;
       case ResponseType::PROVISION_PROCESSING:
         $response = new ProvisioningProcessingResponse();
         break;
