@@ -29,6 +29,15 @@ abstract class ProvisioningResponse extends Response
    */
   public $identity;
 
+
+  /**
+   * Licence key to save as the purchase or subscription's unique reference on
+   * successful provisioning. Leave null or empty to preserve the current value.
+   *
+   * @var string|null
+   */
+  public $licenceKey;
+
   public function hydrate($from)
   {
     Objects::hydrate($this, $from);
